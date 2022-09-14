@@ -3,6 +3,9 @@ const bform = document.getElementById('b-form');
 const user = document.getElementById('user');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
+const email_c = document.getElementById('email_c');
+const password_c = document.getElementById('password_c');
+
 
 
 const setErrors = (message, field, isError = true) => {
@@ -39,5 +42,8 @@ const validateEmailFormat = e => {
 user.addEventListener("blur", (e) => validateEmptyField("Agregue un nombre", e));
 password.addEventListener("blur", (e) => validateEmptyField("Ingrese una contraseña", e));
 email.addEventListener("blur", (e) => validateEmptyField("Escriba un correo", e));
+password_c.addEventListener("blur", (e) => validateEmptyField("Ingrese una contraseña", e));
+email_c.addEventListener("blur", (e) => validateEmptyField("Escriba un correo", e));
 
 email.addEventListener("input", validateEmailFormat);
+email_c.addEventListener("input", validateEmailFormat);
