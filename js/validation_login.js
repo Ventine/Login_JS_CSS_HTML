@@ -18,7 +18,7 @@ const setErrors = (message, field, isError = true) => {
   }
 }
 
-const validateEmptyField = (message, e) => { 
+const validateEmptyField = (message, e) => {
   const field = e.target;
   const fieldValue = e.target.value;
   if (fieldValue.trim().length === 0) {
